@@ -7,6 +7,7 @@ import javax.transaction.Transactional;
 import org.eshop.core.entities.Category;
 import org.eshop.core.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 @Service

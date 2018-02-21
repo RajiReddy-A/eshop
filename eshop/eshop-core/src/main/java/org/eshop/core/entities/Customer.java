@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name="customers")
 public class Customer {
 	
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
     private Integer id;
 	
