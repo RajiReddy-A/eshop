@@ -1,4 +1,4 @@
-package org.eshop.site.controllers;
+package org.eshop.site.web.controllers;
 
 import java.util.List;
 
@@ -18,10 +18,9 @@ public class HomeController {
 	//private CatalogService catalogService;
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
-	@ResponseBody
 	public String getHomePage() {
 		System.out.println("inside gethomepage");
-		return "checking";
+		return "homepage";
 		//return catalogService.getAllCategories();
 	}
 

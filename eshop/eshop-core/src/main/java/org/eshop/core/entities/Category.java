@@ -12,6 +12,8 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="categories")
 public class Category {
@@ -77,7 +79,8 @@ public class Category {
 	public void setDisabled(boolean disabled) {
 		this.disabled = disabled;
 	}
-
+	
+	@JsonIgnoreProperties("category")
 	public Set<Product> getProducts() {
 		return products;
 	}

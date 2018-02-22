@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="products")
 public class Product {
@@ -31,6 +33,9 @@ public class Product {
     
     @Column(name="price", nullable=false)
     private BigDecimal price = new BigDecimal("0.0");
+    
+    @Column(name="quantity", nullable=false)
+    private int quantity;
     
     @Column(name="imageUrl")
     private String imageUrl;
@@ -50,13 +55,14 @@ public class Product {
     	
     }
     
-	public Product(Integer id, String name, String description, BigDecimal price, String imageUrl, boolean disabled,
+	public Product(Integer id, String name, String description, BigDecimal price,int quantity, String imageUrl, boolean disabled,
 			Date createdOn, Category category) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;
+		this.quantity = quantity;
 		this.imageUrl = imageUrl;
 		this.disabled = disabled;
 		this.createdOn = createdOn;
@@ -95,6 +101,14 @@ public class Product {
 		this.price = price;
 	}
 
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 	public String getImageUrl() {
 		return imageUrl;
 	}
@@ -119,6 +133,7 @@ public class Product {
 		this.createdOn = createdOn;
 	}
 
+	@JsonIgnoreProperties("products")
 	public Category getCategory() {
 		return category;
 	}

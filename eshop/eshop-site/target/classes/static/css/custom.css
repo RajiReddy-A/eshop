@@ -1,0 +1,15 @@
+body{
+	background: #f1f3f6;	
+}
+
+.navbar-custom .navbar-nav .nav-link{
+    color: #FFF !important;
+}
+
+.jumbotron{
+	background-color: #1ca0b8;
+}
+
+.bg-white{
+	background-color: #FFF !important;
+}
