@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<nav th:replace="common/navbar :: common-navbar" />
+
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6 col-sm-offset-3 form-box">
+			<div class="form-top">
+				<div class="form-top-left">
+					<h3>Create an account</h3>
+					<p>Enter your details:</p>
+				</div>
+				<div class="form-top-right">
+					<i class="fa fa-lock"></i>
+				</div>
+			</div>
+			<div class="form-bottom">
+				<form role="form" action="" method="post" class="login-form">
+					<div class="form-group">
+						<label class="sr-only" for="form-firstname">Firstname</label> <input
+							type="text" name="form-firstname" placeholder="Firstname..."
+							class="form-username form-control" id="form-firstname">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-lastname">Lastname</label> <input
+							type="text" name="form-lastname" placeholder="Lastname..."
+							class="form-username form-control" id="form-lastname">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-email">Email</label> <input
+							type="text" name="form-email" placeholder="Email..."
+							class="form-username form-control" id="form-email">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-password">Password</label> <input
+							type="password" name="form-password" placeholder="Password..."
+							class="form-password form-control" id="form-password">
+					</div>
+					<button type="submit" class="btn">Sign up!</button>
+				</form>
+			</div>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+
+	<footer th:replace="common/footer :: common-footer" />
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

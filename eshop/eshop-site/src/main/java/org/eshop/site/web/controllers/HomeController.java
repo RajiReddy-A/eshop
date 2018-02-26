@@ -23,5 +23,15 @@ public class HomeController {
 		return "homepage";
 		//return catalogService.getAllCategories();
 	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String getLoginPage() {
+		return "login";
+	}
+	
+	@RequestMapping(value="/register", method=RequestMethod.GET)
+	public String getRegistrationPage() {
+		return "signup";
+	}
 
 }
