@@ -29,22 +29,27 @@
 				<form role="form" action="" method="post" class="login-form">
 					<div class="form-group">
 						<label class="sr-only" for="form-firstname">Firstname</label> <input
-							type="text" name="form-firstname" placeholder="Firstname..."
+							th:field="${customer.firstName}" type="text" name="form-firstname" placeholder="Firstname..."
 							class="form-username form-control" id="form-firstname">
 					</div>
 					<div class="form-group">
 						<label class="sr-only" for="form-lastname">Lastname</label> <input
-							type="text" name="form-lastname" placeholder="Lastname..."
+							th:field="${customer.lastName}" type="text" name="form-lastname" placeholder="Lastname..."
 							class="form-username form-control" id="form-lastname">
 					</div>
 					<div class="form-group">
 						<label class="sr-only" for="form-email">Email</label> <input
-							type="text" name="form-email" placeholder="Email..."
+							th:field="${customer.email}" type="text" name="form-email" placeholder="Email..."
 							class="form-username form-control" id="form-email">
 					</div>
 					<div class="form-group">
+						<label class="sr-only" for="form-phone">Phone</label> <input
+							th:field="${customer.phone}" type="text" name="form-phone" placeholder="Phone Number..."
+							class="form-password form-control" id="form-phone">
+					</div>
+					<div class="form-group">
 						<label class="sr-only" for="form-password">Password</label> <input
-							type="password" name="form-password" placeholder="Password..."
+							th:field="${customer.password}" type="password" name="form-password" placeholder="Password..."
 							class="form-password form-control" id="form-password">
 					</div>
 					<button type="submit" class="btn">Sign up!</button>
