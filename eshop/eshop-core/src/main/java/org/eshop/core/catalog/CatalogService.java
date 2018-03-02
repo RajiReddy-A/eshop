@@ -27,5 +27,9 @@ public class CatalogService {
 	public List<Product> getAllProducts(){
 		return productRepository.findAll();
 	}
+	
+	public  Product getProduct(String name) {
+		return productRepository.findByName(name);
+	}
 
 }

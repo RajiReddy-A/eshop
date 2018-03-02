@@ -10,6 +10,8 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="customers")
 public class Customer {
@@ -30,6 +32,7 @@ public class Customer {
     @Column(name="email", nullable=false, unique=true)
     private String email;
     
+    @JsonIgnore
     @NotEmpty
     @Column(name="password", nullable=false)
     private String password;
