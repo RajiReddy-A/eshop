@@ -6,6 +6,6 @@ import org.eshop.core.entities.Category;
 
 public interface CategoryRepository extends JpaRepository<Category, Integer>{
 
-	Category getByName(String name);
+	Category findByName(String name);
 
 }

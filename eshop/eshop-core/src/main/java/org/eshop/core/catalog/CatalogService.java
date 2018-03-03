@@ -31,5 +31,9 @@ public class CatalogService {
 	public  Product getProduct(String name) {
 		return productRepository.findByName(name);
 	}
+	
+	public Category getCategory(String category) {
+		return categoryRepository.findByName(category);
+	}
 
 }

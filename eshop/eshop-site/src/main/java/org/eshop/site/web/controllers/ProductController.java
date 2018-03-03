@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class ProductController {
 	
-	@RequestMapping(value="/product/{productname}", method=RequestMethod.GET)
+	@RequestMapping(value="/products", method=RequestMethod.GET)
 	public String getProduct() {
 		return "productdetails";
 	}

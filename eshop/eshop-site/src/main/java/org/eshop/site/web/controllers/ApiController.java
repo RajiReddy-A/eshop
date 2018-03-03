@@ -54,5 +54,11 @@ public class ApiController {
 		public Product getProduct(@PathVariable String product) {
 			return catalogService.getProduct(product);
 		}
+		
+		@RequestMapping(value="/api/category/{category}")
+		@ResponseBody
+		public Category getCategory(@PathVariable String category) {
+			return catalogService.getCategory(category);
+		}
 
 }
