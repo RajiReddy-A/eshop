@@ -1,4 +1,4 @@
-(function($){
+function scriptSlider(){
 
         // Slidder home 4
         if($('#bxslider-home4').length >0){
@@ -32,4 +32,4 @@
             });
             //slider.reloadSlider();
         }
-})(jQuery); // End of use strict
+}; // End of use strict

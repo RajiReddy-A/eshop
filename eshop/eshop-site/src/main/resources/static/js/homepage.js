@@ -1,52 +1,35 @@
-$(document).ready(function() {
-  
-	console.log("js loaded");
+$(document).ready(function(){
+	
 	$.ajax({
-		url: window.location.protocol + "//" + window.location.host +"/api/allcategories"
-	}).then(function(data){
-		console.log(data);
-		for(let value of data){
-			var imgUrl = "";
-			if(value.name === "Speakers"){
-				imgUrl = "https://goo.gl/xy7K3y";
-			}
-			else if(value.name === "Televisions"){
-				imgUrl = "https://goo.gl/JoNmWE";
-			}
-			$("#categories").append(
-					'<div class="container-fluid bg-white marginbtm3">\
-						<h3 class="text-center"><a href="#">View All '+value.name+'</a></h3>\
-						<div class="row text-center" id="'+value.name+'">\
-						</div>\
-					</div>'
-			);
+		type: "GET",
+		url: window.location.protocol + "//" + window.location.host +"/api/allproducts",
+		success: function(data){
 			
-			for(i=0;i<=3;i++){
-				$("#"+value.name).append(
-						'<div class="col-lg-3 col-md-4 col-xs-6">\
-				          <a href="#" class="d-block mb-4 h-100">\
-				            <img class="img-fluid img-thumbnail" src="'+imgUrl+'" alt="">\
-				          	<p>'+value.products[i].name+'</p>\
-				          	<p>Rs. '+value.products[i].price+'</p>\
-				          </a>\
-				        </div>'
-				);
+			for(let value of data){
+				$("#bxslider-home4").append('\
+						<li>\
+						<img src="'+value.imageUrl+'" style="width:700px;height:365px;" alt="Slide">\
+						<div class="caption-group">\
+							<h2 class="caption title">\
+								<span class="primary"><strong>'+value.name+'</strong></span>\
+							</h2>\
+							<h4 class="caption subtitle">Rs. '+value.price+'</h4>\
+							<a class="caption button-radius" href="products?product='+value.name+'"><span class="icon"></span>Shop now</a>\
+						</div>\
+					</li>\
+				');
 			}
+			
+			scriptSlider();
+			mainJs();
+			
+		},
+		error: function(){
+			scriptSlider();
+			mainJs();
 		}
-
-		/*for(i=0;i<=3;i++){
-			console.log(data[i]);
-			$("#products").append(
-					'<div class="col-lg-3 col-md-4 col-xs-6">\
-			          <a href="#" class="d-block mb-4 h-100">\
-			            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">\
-			          	<p>'+data[i].name+'</p>\
-			          	<p>Rs. '+data[i].price+'</p>\
-			          </a>\
-			        </div>'
-			);
-		}*/
-		
 	});
+	
+	
 	
 });

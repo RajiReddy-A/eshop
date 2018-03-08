@@ -2,36 +2,120 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>eShop Home Page</title>
+	    <!-- Google Fonts -->
+	    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+	    
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+	    <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="css/responsive.css">
 	</head>
 	
 	<body>
 	
 		<nav th:replace="common/navbar :: common-navbar"/>
-		
-		<div class="jumbotron text-center">
-			<h1>Welcome!</h1>
-		</div>
-		
-		<div id="categories">
-		
-			<!-- <div class="container-fluid bg-white">
-				<h3 id="viewallspeakers"></h3>
-				<div class="row text-center" id="products">
+
+		<div class="product-big-title-area">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-12">
+	                    <div class="product-bit-title text-center">
+	                        <h2>eShop</h2>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    
+	    <div class="slider-area">
+	        	<!-- Slider -->
+				<div class="block-slider block-slider4">
+					<ul class="" id="bxslider-home4">
+						
+					</ul>
 				</div>
-			</div> -->
-			
-		</div>
+				<!-- ./Slider -->
+	    </div> <!-- End slider area -->
+	    
+	    <div class="promo-area">
+	        <div class="zigzag-bottom"></div>
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-3 col-sm-6">
+	                    <div class="single-promo promo1">
+	                        <i class="fa fa-refresh"></i>
+	                        <p>30 Days return</p>
+	                    </div>
+	                </div>
+	                <div class="col-md-3 col-sm-6">
+	                    <div class="single-promo promo2">
+	                        <i class="fa fa-truck"></i>
+	                        <p>Free shipping</p>
+	                    </div>
+	                </div>
+	                <div class="col-md-3 col-sm-6">
+	                    <div class="single-promo promo3">
+	                        <i class="fa fa-lock"></i>
+	                        <p>Secure payments</p>
+	                    </div>
+	                </div>
+	                <div class="col-md-3 col-sm-6">
+	                    <div class="single-promo promo4">
+	                        <i class="fa fa-gift"></i>
+	                        <p>New products</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div> <!-- End promo area -->
+	    
+	    <div class="brands-area">
+	        <div class="zigzag-bottom"></div>
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-12">
+	                    <div class="brand-wrapper">
+	                        <div class="brand-list">
+	                            <img src="https://freshdesignweb.com/demo/template/ustora/img/brand3.png" alt="">
+	                            <img src="https://freshdesignweb.com/demo/template/ustora/img/brand6.png" alt="">
+	                            <img src="https://freshdesignweb.com/demo/template/ustora/img/brand4.png" alt="">
+	                            <img src="https://freshdesignweb.com/demo/template/ustora/img/brand5.png" alt="">
+	                            <img src="https://www.brandtld.news/wp-content/uploads/2016/06/dell-logo-400x200.png" alt="">
+	                            <img src="http://interbrand.com/assets/00000001523.png" alt="">                            
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div> <!-- End brands area -->
 		
 		<footer th:replace="common/footer :: common-footer"/>
 		
 		<script src="https://code.jquery.com/jquery.min.js"></script>
- 		<script type="text/javascript" src="js/homepage.js"></script>
- 		<script type="text/javascript" src="js/navbar.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ 		<!-- jQuery sticky menu -->
+	    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+	    
+	    <!-- Slider -->
+	    <script type="text/javascript" src="js/bxslider.min.js"></script>
+		<script type="text/javascript" src="js/script.slider.js"></script>
+		
+	    <!-- jQuery easing -->
+	    <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+	    <script type="text/javascript" src="js/navbar.js"></script>
+	    <script type="text/javascript" src="js/main.js"></script>
+	    <script type="text/javascript" src="js/homepage.js"></script>
+ 		
 	</body>
 	
 </html>
