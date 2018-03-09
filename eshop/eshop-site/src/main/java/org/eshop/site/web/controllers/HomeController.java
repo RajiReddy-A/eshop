@@ -1,22 +1,16 @@
 package org.eshop.site.web.controllers;
 
 import java.security.Principal;
-import java.util.List;
-
-import org.eshop.core.catalog.CatalogService;
 import org.eshop.core.customers.CustomerService;
-import org.eshop.core.entities.Category;
 import org.eshop.core.entities.Customer;
 import org.eshop.site.web.validators.CustomerValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller

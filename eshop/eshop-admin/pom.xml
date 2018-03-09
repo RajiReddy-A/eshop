@@ -6,8 +6,10 @@
     <groupId>com.eshop</groupId>
     <artifactId>eshop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../</relativePath>
   </parent>
   <artifactId>eshop-admin</artifactId>
+  <packaging>jar</packaging>
   <name>eshop-admin</name>
   <url>http://maven.apache.org</url>
   <properties>
